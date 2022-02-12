@@ -1,0 +1,29 @@
+#ID AND NAME: 20CE033 GOHIL SURYADEEP
+#LAPINDROME
+
+def Lapindrome(string):
+    strlen = len(string)
+    print(strlen)
+    if(strlen%2==0):
+        a = string[:(strlen // 2)]
+        b = string[(strlen // 2):]
+    else:
+        a = string[:(strlen // 2)]
+        b = string[(strlen // 2) + 1:]
+        print(b)
+    la = list(a)
+    la.sort()
+    print(la)
+    lb = list(b)
+    lb.sort()
+    print(lb)
+    if (la==lb):
+        print("YES")
+    else:
+        print("NO")
+
+t = int(input())
+
+for i in range(t):
+    txt =  input()
+    Lapindrome(txt)
